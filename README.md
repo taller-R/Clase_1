@@ -1,4 +1,12 @@
-# Antes de iniciar la clase debes...
+![GitHub](https://img.shields.io/github/license/taller-R/clase_1) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/taller-R/clase_1/issues) ![](https://img.shields.io/github/followers/taller-R?style=social)
+
+<img src="https://avatars0.githubusercontent.com/u/69440432?s=400&u=96b3e58c713578b563d5c3d3c259f34965ac8e33&v=4" align="right" width=120 height=120 alt="" />
+
+### Autor
+
+<img src="https://avatars2.githubusercontent.com/u/24576122?s=400&u=8092eac7857baab63d2e0c7243e473463b082b1a&v=4" align="right" width=120 height=120 alt="" />
+
+# Instrucciones
 
 ### 1. Instalar R
 
@@ -20,6 +28,6 @@ Para instalar la versión de Rstudio compatible con su sistema operativo, vaya a
 
 ### 3. Notas
 
-* Los vídeos de la clase se encuentran [aquí](https://www.dropbox.com/sh/as0dtkuv9tpw7fv/AAA2R3_paaM26lhiUE3LfnXza?dl=0) 
+* Los vídeos de la clase se encuentran [aquí](https://www.dropbox.com/sh/as0dtkuv9tpw7fv/AAA2R3_paaM26lhiUE3LfnXza?dl=0). Dropbox no deja reproducir los vídeos más de 1 hora en linea, debe descargarlos para que pueda verlos completos. 
 
 * Por favor hacer todas las correcciones ortográficas a este y los demas archivos ***.md*** del repositorio.

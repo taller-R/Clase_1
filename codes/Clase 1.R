@@ -1,9 +1,7 @@
-"
-Elaborado por: Eduard Martinez 
-Fecha: 12/08/2020
-Nota: Para evitar conflictos entre los diferentes sistema operativos, no se usan
-acentos ni caracteres especiales a lo largo de este script
-"
+# Elaborado por: Eduard Martinez 
+# Fecha: 12/08/2020
+# Nota: Para evitar conflictos entre los diferentes sistema operativos, no se usan acentos ni caracteres especiales a lo largo de este script
+
 
 #++++++++++++++++++++++++++++++#
 # Lenguaje orientado a objetos #
@@ -24,10 +22,9 @@ b = seq(1,10,1)
 typeof(x=1.4) # Double
 typeof(x=4L) # Integer
 typeof(x = "2")  
-"
-Importante no siempre se debe escribir el nombre del argumento, siempre y cuando se siga 
-el estricto orden de los argumentos de la funcion
-"
+"Importante no siempre se debe escribir el nombre del argumento, siempre y cuando se siga 
+  el estricto orden de los argumentos de la funcion"
+
 typeof("Hola") # Character
 typeof(TRUE) # Logical
 class(NA) ; class(1+100) ; class(0.5); class("Texto"); class("1")
@@ -58,4 +55,8 @@ Sin embargo, se debe tener cuidado con la funcion as.() porque al convertir
 datos de character a numeric puede perse informacion
 "
 as(c("1000 M","7","25","y7"),"numeric",TRUE) 
+
+
+
+
 
