@@ -2,10 +2,6 @@
 
 <img src="https://avatars0.githubusercontent.com/u/69440432?s=400&u=96b3e58c713578b563d5c3d3c259f34965ac8e33&v=4" align="right" width=120 height=120 alt="" />
 
-### Autor
-
-<img src="https://avatars2.githubusercontent.com/u/24576122?s=400&u=8092eac7857baab63d2e0c7243e473463b082b1a&v=4" align="right" width=120 height=120 alt="" />
-
 # Instrucciones
 
 ### 1. Instalar R
