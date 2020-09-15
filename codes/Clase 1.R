@@ -55,7 +55,7 @@ as(20,"character",TRUE)
 
 "
 Sin embargo, se debe tener cuidado con la funcion as.() porque al convertir
-datos de character a numeric puede perse informacion
+datos de character a numeric puede perderse informacion
 "
 as(c("1000 M","7","25","y7"),"numeric",TRUE) 
 
