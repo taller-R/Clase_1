@@ -38,7 +38,7 @@ la funcion 'str' sera de mayor utilidad para otros objetos
 "
 # Funciones is.() y as.()
 " 
-Las funciones is.() me devueleven un elemento logical como 'FALSE' o 'TRUE' 
+Las funciones is.() me devuelven un elemento logical como 'FALSE' o 'TRUE' 
 "
 is.numeric("1000") ; is.character(20) ; is.logical(TRUE) ; is.factor(9)
 " 
