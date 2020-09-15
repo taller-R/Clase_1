@@ -46,7 +46,7 @@ Las funciones as.() se usan para convertir un elemento de un formato a otro
 "
 as.numeric("1000") ; as.character(20) ; as.factor(9)
 "
-Tanto la funcion is.() como as.() tiene una forma general de ecsribirse como:
+Tanto la funcion is.() como as.() tiene una forma general de escribirse como:
 "
 is(object = "1000" ,class2 = "numeric")
 is(20, "character")
