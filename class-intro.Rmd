@@ -1,0 +1,242 @@
+---
+title: "Taller de R: Estadística y programación"
+subtitle: "Lectura 1: Introdución a R"
+author: "Eduard Martinez"
+date: "Universidad de los Andes | [ECON-1302](https://github.com/taller-R)"
+output: 
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts] 
+    lib_dir: help/libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(tidyverse)
+library(hrbrthemes)
+library(ggthemes)
+library(knitr)
+opts_chunk$set(
+  fig.align="center",  
+  fig.height=4, #fig.width=6, out.width="748px", out.length="520.75px",
+  dpi=300, #fig.path='Figs/',
+  cache=T#, echo=F, warning=F, message=F
+  )
+```
+
+
+# Contenido
+
+1. [Prólogo](#prologue)
+
+2. [Syllabus](#syllabus)
+
+3. [Usar R?](#use)
+
+4. [Íniciemos](#started) 
+
+5. [Entorno de trabajo de R](#entorno)
+
+
+<!--------------------->
+<!---    Prólogo    --->
+<!--------------------->
+---
+class: inverse, center, middle
+name: prologue
+
+# Prólogo
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+---
+# Introducción
+
+### Acerca del curso
+
+* GitHub: [https://github.com/taller-R](https://github.com/taller-R)
+
+* Slack: [https://slack.com](https://slack.com/intl/es-co/)
+
+* Microsoft Teams: [Equipo de trabajo Taller de R, ECON-1302](https://www.microsoft.com/es-co/microsoft-teams/download-app)
+
+--
+
+### Acerca de mí
+
+[Eduard Martinez](https://github.com/eduard-martinez), estudiante doctorado en Economía de la Universidad de los Andes. Puedes ver mi página web [aquí](https://eduard-martinez.github.io).
+
+<p style="color:black"><img alt="Qries" src="./help/figures/correo.png" width=30" height="30"> ef.martinezg@uniandes.edu.co </img></p>
+
+<p><a href="https://twitter.com/emartigo" style="color:black;"> <img alt="Qries" src="./help/figures/twitter.jpg" width=30" height="30">  @emartigo</a> </p>
+ 
+<p><a href="https://github.com/eduard-martinez" style="color:black;"> <img alt="Qries" src="./help/figures/github.png" width=30" height="30">  eduard-martinez </a> </p>
+
+
+<!--------------------->
+<!---    Syllabus   --->
+<!--------------------->
+---
+class: inverse, center, middle
+name: syllabus
+
+# Syllabus
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+(Puedes encontrar el programa completo del curso [aquí](https://github.com/taller-R/taller-R/blob/master/ECON_1302_01_Eduard_Martinez.pdf))
+
+
+---
+# Qué es este curso? 
+
+## Objetivo 
+
+Este curso busca promover el uso de lenguajes de programación de código abierto (open source), familiarizando al estudiante con el entorno de trabajo de R e introduciendo a los estudiantes en algunos métodos computacionales aplicados en la investigación económica.
+
+--
+
+## Organización del curso
+
+El curso está dividido en 5 módulos así: [ECON-1302](https://github.com/taller-R)
+
+--
+
+## Evaluación
+
+| Componente                          | Peso |
+|:-|-:|
+| Task 1 (Módulos 1, 2 y 3) | 30% |
+| Task 2 (Módulo 4) | 30% |
+| Task 3 (Módulos 5) | 30% |
+| Participación activa en el curso: | 10% |
+
+
+---
+# Cuando completes este curso: 
+
+<div align="center">
+<img src="help/pics/awesome.jpg"></img>
+</div>
+
+
+
+<!--------------------->
+<!---    Usar R?    --->
+<!--------------------->
+---
+class: inverse, center, middle
+name: use
+
+# Usar R?
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+R es un entorno de programacion libre que fue desarrollado en el año 1993 por Robert Gentleman y Ross Ihaka del Departamento de Estadística de la Universidad de Auckland.
+
+
+---
+# Por qué usar R y RStudio? (cont...)
+
+## Ventajas
+
+- Ideal para la ciencia de datos
+  - Ver: [*The Impressive Growth of R*](https://stackoverflow.blog/2017/10/10/impressive-growth-r/), [*The Popularity of Data Science Software*](http://r4stats.com/articles/popularity/).
+
+- Open-source (free!) 
+  - Puedes descargarlo, instalarlo y usarlo sin ningun costo.
+  - Colaboradores en la academia y en la industria.
+  - Más de 17.000 librerías disponibles.
+
+- Múltiples bases de datos
+  - No necesitas usar `preserve`, `keep` u otras funciones. Puedes tener varias bases de datos abiertas al mismo tiempo en diferentes objetos.
+
+---
+# Por qué usar R y RStudio?
+
+## Popularidad
+
+```{R, eval = T , include=T , echo = F}
+pop_df =  data.frame( lang = c("SQL", "Python", "R", "SAS", "Matlab", "SPSS", "Stata"),
+                      n_jobs = c(107130, 66976, 48772, 25644, 11464, 3717, 1624),
+                      free = c(T, T, T, F, F, F, F))
+
+## Plot it
+pop_df %>%  mutate(lang = lang %>% factor(ordered = T)) %>%
+            ggplot(aes(x = lang, y = n_jobs, fill = free)) +
+            geom_col() + geom_hline(yintercept = 0) +
+            aes(x = reorder(lang, -n_jobs), fill = reorder(free, -free)) +
+            xlab("Statistical language") + scale_y_continuous(label = scales::comma) +
+            ylab("Number of jobs") +
+            labs( title = "Comparing statistical languages", subtitle = "Number of job postings on Indeed.com, 2019/01/06" , caption = "Tomado de: https://github.com/uo-ec607") +
+            scale_fill_manual( "Free?", labels = c("True", "False"), values = c("#f92672", "darkslategray")) + 
+            ggthemes::theme_pander(base_size = 17) + theme(legend.position = "bottom") 
+```
+
+
+---
+# Además en R...
+
+## Lenguaje orientado a objetos 
+
+1. Todo es un objeto.
+
+2. Todo tiene un nombre.
+
+- pronto entenderemos mejor esto...
+
+## Librerías y funciones
+
+3. Se usan funciones para crear y editar objetos.
+
+4. Todas las funciones han sido escritas anteriormente por otros colaboradores en paquetes o librerías que debemos "llamar" cada vez que se vayan a usar.
+
+
+
+
+
+<!--------------------->
+<!---   Iniciemos   --->
+<!--------------------->
+---
+class: inverse, center, middle
+name: started
+
+# Íniciemos
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+---
+
+# Descargar softwares
+
+- Descargar [R](https://cran.r-project.org/)
+
+- Descargar [RStudio](https://www.rstudio.com/products/rstudio/download/preview/)
+
+  - RStudio es un entorno de desarrollo integrado (IDE) para el lenguaje de programación R. En un lenguaje más practico, Rstudio brinda una interfaz más amigable que R, brindando una experiencia de aprendizaje más placentera.
+
+- Descargar [Git](https://git-scm.com/downloads)
+
+- Crear una cuenta de [GitHub](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
+
+- Configurar [Git](#git)
+
+---
+# Instalar R (cont...)
+
+Version 4.0.3. para [MAC](https://cran.r-project.org/bin/macosx/)
+
+![](help/figures/loop_mac.gif)
+
+---
+# Instalar R (cont...)
+
+Version 4.0.3. para [Windows](https://cran.r-project.org/bin/windows/base/) o [Linux](https://cran.r-project.org)
+
+
+![](help/figures/loop_windows.gif)
+
