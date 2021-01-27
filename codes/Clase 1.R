@@ -35,7 +35,7 @@ la funcion 'str' sera de mayor utilidad para otros objetos
 "
 # Funciones is.() y as.()
 " 
-Las funciones is.() me devueleven un elemento logical como 'FALSE' o 'TRUE' 
+Las funciones is.() me devuelven un elemento logical como 'FALSE' o 'TRUE' 
 "
 is.numeric("1000") ; is.character(20) ; is.logical(TRUE) ; is.factor(9)
 " 
@@ -43,7 +43,7 @@ Las funciones as.() se usan para convertir un elemento de un formato a otro
 "
 as.numeric("1000") ; as.character(20) ; as.factor(9)
 "
-Tanto la funcion is.() como as.() tiene una forma general de ecsribirse como:
+Tanto la funcion is.() como as.() tiene una forma general de escribirse como:
 "
 is(object = "1000" ,class2 = "numeric")
 is(20, "character")
@@ -52,7 +52,7 @@ as(20,"character",TRUE)
 
 "
 Sin embargo, se debe tener cuidado con la funcion as.() porque al convertir
-datos de character a numeric puede perse informacion
+datos de character a numeric puede perderse informacion
 "
 as(c("1000 M","7","25","y7"),"numeric",TRUE) 
 
