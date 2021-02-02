@@ -6,25 +6,24 @@
 
 ## 1. Descargar la clase
 
-Para descargar las clases debes seguir los siguientes pasos:
+Puedes replicar esta clase de 3 diferentes formas:
 
-![](help/pic/0.png)
+- 1.1. Descargar repositorio manualmente.
+- 1.2. Crear proyecto con versión de control de Git.
+- 1.3. Clonar el repositorio desde la terminal.
 
-![](help/pic/1.png)
+### 1.1. Descargando el repositorio manualmente. 
 
-![](help/pic/2.png)
+![](help/pics/download.gif) 
 
-![](help/pic/3.png)
+### 1.2. Crear proyecto con versión de control de Git.
 
-![](help/pic/4.png)
+Para hacerlo de esta forma, primero debes instalar [Git](https://git-scm.com/downloads) en tu equipo.
 
-![](help/pic/5.png)
 
-![](help/pic/6.png)
 
-![](help/pic/7.png)
+### 1.3. Clonar el repositorio desde la terminal.
 
-![](help/pic/8.png)
 
-![](help/pic/9.png)
+
 
