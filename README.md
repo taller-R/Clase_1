@@ -24,26 +24,6 @@ Para hacerlo de esta forma, debes tener instalado [Git](https://git-scm.com/down
 
 Para hacerlo de esta forma, debes tener instalado [Git](https://git-scm.com/downloads) en tu equipo.
 
-```
-- Paso 1: Abrir la terminal del equipo
-
-- Paso 2: Establecer el directorio 
-  
-  Veamos el directorio de trabajo en el que estamos: 
-  
-  $ ls  
-  
-  Establecer el nuevo directorio
-  
-  $ cd downloads/clases_r/ 
-
-- Paso 3: clonar el repositorio usando el https
-
-  $ git clone https://github.com/taller-R/Clase_1.git
-
-- Paso 4: Ya puedes replicar la clase!
-```
-
 ![](help/pics/terminal.gif)
 
 
