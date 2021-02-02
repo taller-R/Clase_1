@@ -1,0 +1,17 @@
+"0","options(htmltools.dir.version = FALSE)"
+"0","library(knitr)"
+"0","opts_chunk$set("
+"0","  fig.align=""center"",  "
+"0","  fig.height=4, #fig.width=6,"
+"0","  # out.width=""748px"", #out.length=""520.75px"","
+"0","  dpi=300, #fig.path='Figs/',"
+"0","  cache=T#, echo=F, warning=F, message=F"
+"0","  )"
+"0","library(tidyverse)"
+"0","library(hrbrthemes)"
+"2","Error: package or namespace load failed for ‘hrbrthemes’ in dyn.load(file, DLLpath = DLLpath, ...):
+ unable to load shared object '/Users/eduardmartinez/Library/R/3.6/library/systemfonts/libs/systemfonts.so':
+  dlopen(/Users/eduardmartinez/Library/R/3.6/library/systemfonts/libs/systemfonts.so, 6): Library not loaded: /opt/X11/lib/libfreetype.6.dylib
+  Referenced from: /Users/eduardmartinez/Library/R/3.6/library/systemfonts/libs/systemfonts.so
+  Reason: image not found
+"

@@ -18,12 +18,34 @@ Puedes replicar esta clase de 3 diferentes formas:
 
 ### 1.2. Crear proyecto con versión de control de Git.
 
-Para hacerlo de esta forma, primero debes instalar [Git](https://git-scm.com/downloads) en tu equipo.
+Para hacerlo de esta forma, debes tener instalado [Git](https://git-scm.com/downloads) en tu equipo.
 
-
+![](help/pics/crear_proyecto.gif) 
 
 ### 1.3. Clonar el repositorio desde la terminal.
 
+Para hacerlo de esta forma, debes tener instalado [Git](https://git-scm.com/downloads) en tu equipo.
 
+```
+- Paso 1: Abrir la terminal del equipo
+
+- Paso 2: Establecer el directorio 
+  
+  Veamos el directorio de trabajo en el que estamos: 
+  
+  $ ls  
+  
+  Establecer el nuevo directorio
+  
+  $ cd downloads/clases_r/ 
+
+- Paso 3: clonar el repositorio usando el https
+
+  $ git clone https://github.com/taller-R/Clase_1.git
+
+- Paso 4: Ya puedes replicar la clase!
+```
+
+![](help/pics/terminal.gif)
 
 

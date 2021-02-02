@@ -1,0 +1,7 @@
+{
+    "installOptions": {
+        "installFromRepository": true,
+        "libraryPath": "/Users/eduardmartinez/Library/R/4.0/library",
+        "installDependencies": true
+    }
+}
