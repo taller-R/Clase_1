@@ -4,9 +4,9 @@
     <title>Taller de R: Estadística y programación</title>
     <meta charset="utf-8" />
     <meta name="author" content="Eduard Martinez" />
+    <link href="libs/remark-css/fc.css" rel="stylesheet" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
-    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
   </head>
   <body>
     <textarea id="source">
@@ -18,8 +18,6 @@ class: center, middle, inverse, title-slide
 ### Universidad de los Andes | <a href="https://github.com/taller-R">ECON-1302</a>
 
 ---
-
-
 
 
 
@@ -48,13 +46,12 @@ name: prologue
 
 # Prólogo
 
-&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=796px&gt;&lt;/html&gt;
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#FF007F' size=1px width=796px&gt;&lt;/html&gt;
 
 
 ---
-# Introducción
 
-### Acerca del curso
+# Acerca del curso
 
 * GitHub: [https://github.com/taller-R](https://github.com/taller-R)
 
@@ -64,7 +61,7 @@ name: prologue
 
 --
 
-### Acerca de mí
+# Acerca de mí
 
 [Eduard Martinez](https://github.com/eduard-martinez), estudiante doctorado en Economía de la Universidad de los Andes. Puedes ver mi página web [aquí](https://eduard-martinez.github.io).
 
@@ -84,27 +81,25 @@ name: syllabus
 
 # Syllabus
 
-&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=796px&gt;&lt;/html&gt;
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#FF007F' size=1px width=796px&gt;&lt;/html&gt;
 
 (Puedes encontrar el programa completo del curso [aquí](https://github.com/taller-R/taller-R/blob/master/ECON_1302_01_Eduard_Martinez.pdf))
 
 
 ---
-# Qué es este curso? 
-
-## Objetivo 
+# Objetivo 
 
 Este curso busca promover el uso de lenguajes de programación de código abierto (open source), familiarizando al estudiante con el entorno de trabajo de R e introduciendo a los estudiantes en algunos métodos computacionales aplicados en la investigación económica.
 
 --
 
-## Organización del curso
+# Organización del curso
 
 El curso está dividido en 5 módulos así: [ECON-1302](https://github.com/taller-R)
 
 --
 
-## Evaluación
+# Evaluación
 
 | Componente                          | Peso |
 |:-|-:|
@@ -115,7 +110,7 @@ El curso está dividido en 5 módulos así: [ECON-1302](https://github.com/talle
 
 
 ---
-# Cuando completes este curso: 
+# Cuando completes este curso...
 
 &lt;div align="center"&gt;
 &lt;img src="pics/awesome.jpg"&gt;&lt;/img&gt;
@@ -131,7 +126,7 @@ class: inverse, center, middle
 name: use
 
 # Usar R?
-&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=796px&gt;&lt;/html&gt;
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#FF007F' size=1px width=796px&gt;&lt;/html&gt;
 
 R es un entorno de programacion libre que fue desarrollado en el año 1993 por Robert Gentleman y Ross Ihaka del Departamento de Estadística de la Universidad de Auckland.
 
@@ -139,7 +134,7 @@ R es un entorno de programacion libre que fue desarrollado en el año 1993 por R
 ---
 # Por qué usar R y RStudio? (cont...)
 
-## Ventajas
+### Ventajas
 
 - Ideal para la ciencia de datos
   - Ver: [*The Impressive Growth of R*](https://stackoverflow.blog/2017/10/10/impressive-growth-r/), [*The Popularity of Data Science Software*](http://r4stats.com/articles/popularity/).
@@ -155,15 +150,15 @@ R es un entorno de programacion libre que fue desarrollado en el año 1993 por R
 ---
 # Por qué usar R y RStudio?
 
-## Popularidad
+### Popularidad
 
 &lt;img src="intro-to-class_files/figure-html/unnamed-chunk-1-1.png" style="display: block; margin: auto;" /&gt;
 
 
 ---
-# Además en R...
+## Además en R...
 
-## Lenguaje orientado a objetos 
+### Lenguaje orientado a objetos 
 
 1. Todo es un objeto.
 
@@ -171,7 +166,7 @@ R es un entorno de programacion libre que fue desarrollado en el año 1993 por R
 
 - pronto entenderemos mejor esto...
 
-## Librerías y funciones
+### Librerías y funciones
 
 3. Se usan funciones para crear y editar objetos.
 
@@ -190,10 +185,9 @@ name: started
 
 # Configuración inicial
 
-&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=796px&gt;&lt;/html&gt;
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#FF007F' size=1px width=796px&gt;&lt;/html&gt;
 
 ---
-
 # Descargar softwares
 
 - Descargar [R](https://cran.r-project.org/)
@@ -209,23 +203,23 @@ name: started
 - Configurar [Git](https://eduard-martinez.github.io/blog/github/clonar_github.html)
 
 ---
-# Instalar R (cont...)
+## Instalar R (cont...)
 
 Version 4.0.3. para [MAC](https://cran.r-project.org/bin/macosx/)
 
-![](figures/loop_mac.gif)
+![](pics/install_r_mac.gif)
 
 ---
-# Instalar R (cont...)
+## Instalar R (cont...)
 
 Version 4.0.3. para [Windows](https://cran.r-project.org/bin/windows/base/) o [Linux](https://cran.r-project.org)
 
 
-![](figures/loop_windows.gif)
+![](pics/install_r_windows.gif)
 
 ---
 name: git
-# Configurar Git
+## Configurar Git
 
 Ir a la CMD o terminal de su equipo y ejecutar los siguientes comandos:
 
@@ -246,14 +240,6 @@ git config --global user.email 'Escribe tu correo de GitHub'
 git config --global user.password "Escribe tu contraseña de GitHub"
 ```
 
-
----
-# Clonar el repositorio de la clase
-
-![](figures/loop_fork.gif)
-
-
-
 ---
 #  Checklist
 
@@ -265,13 +251,11 @@ git config --global user.password "Escribe tu contraseña de GitHub"
 
 ☑ Configuramos nuestra cuenta de GitHub en nuestro equipo
 
-☑ Clonamos un repositorio
-
 ---
 class: inverse, center, middle
 
 # Gracias
-&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=796px&gt;&lt;/html&gt;
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#FF007F' size=1px width=796px&gt;&lt;/html&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

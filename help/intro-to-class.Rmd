@@ -5,19 +5,16 @@ author: "Eduard Martinez"
 date: "Universidad de los Andes | [ECON-1302](https://github.com/taller-R)"
 output: 
   xaringan::moon_reader:
-    css: [default, metropolis, metropolis-fonts] 
+    css: [fc , default , default-fonts] 
     lib_dir: libs
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
-
 ```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
 library(tidyverse)
-library(hrbrthemes)
-library(ggthemes)
+options(htmltools.dir.version = FALSE)
 library(knitr)
 opts_chunk$set(
   fig.align="center",  
@@ -26,7 +23,6 @@ opts_chunk$set(
   cache=T#, echo=F, warning=F, message=F
   )
 ```
-
 
 # Contenido
 
@@ -53,13 +49,12 @@ name: prologue
 
 # Prólogo
 
-<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+<html><div style='float:left'></div><hr color='#FF007F' size=1px width=796px></html>
 
 
 ---
-# Introducción
 
-### Acerca del curso
+# Acerca del curso
 
 * GitHub: [https://github.com/taller-R](https://github.com/taller-R)
 
@@ -69,7 +64,7 @@ name: prologue
 
 --
 
-### Acerca de mí
+# Acerca de mí
 
 [Eduard Martinez](https://github.com/eduard-martinez), estudiante doctorado en Economía de la Universidad de los Andes. Puedes ver mi página web [aquí](https://eduard-martinez.github.io).
 
@@ -89,27 +84,25 @@ name: syllabus
 
 # Syllabus
 
-<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+<html><div style='float:left'></div><hr color='#FF007F' size=1px width=796px></html>
 
 (Puedes encontrar el programa completo del curso [aquí](https://github.com/taller-R/taller-R/blob/master/ECON_1302_01_Eduard_Martinez.pdf))
 
 
 ---
-# Qué es este curso? 
-
-## Objetivo 
+# Objetivo 
 
 Este curso busca promover el uso de lenguajes de programación de código abierto (open source), familiarizando al estudiante con el entorno de trabajo de R e introduciendo a los estudiantes en algunos métodos computacionales aplicados en la investigación económica.
 
 --
 
-## Organización del curso
+# Organización del curso
 
 El curso está dividido en 5 módulos así: [ECON-1302](https://github.com/taller-R)
 
 --
 
-## Evaluación
+# Evaluación
 
 | Componente                          | Peso |
 |:-|-:|
@@ -120,7 +113,7 @@ El curso está dividido en 5 módulos así: [ECON-1302](https://github.com/talle
 
 
 ---
-# Cuando completes este curso: 
+# Cuando completes este curso...
 
 <div align="center">
 <img src="pics/awesome.jpg"></img>
@@ -136,7 +129,7 @@ class: inverse, center, middle
 name: use
 
 # Usar R?
-<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+<html><div style='float:left'></div><hr color='#FF007F' size=1px width=796px></html>
 
 R es un entorno de programacion libre que fue desarrollado en el año 1993 por Robert Gentleman y Ross Ihaka del Departamento de Estadística de la Universidad de Auckland.
 
@@ -144,7 +137,7 @@ R es un entorno de programacion libre que fue desarrollado en el año 1993 por R
 ---
 # Por qué usar R y RStudio? (cont...)
 
-## Ventajas
+### Ventajas
 
 - Ideal para la ciencia de datos
   - Ver: [*The Impressive Growth of R*](https://stackoverflow.blog/2017/10/10/impressive-growth-r/), [*The Popularity of Data Science Software*](http://r4stats.com/articles/popularity/).
@@ -160,14 +153,14 @@ R es un entorno de programacion libre que fue desarrollado en el año 1993 por R
 ---
 # Por qué usar R y RStudio?
 
-## Popularidad
+### Popularidad
 
 ```{R, eval = T , include=T , echo = F}
 pop_df =  data.frame( lang = c("SQL", "Python", "R", "SAS", "Matlab", "SPSS", "Stata"),
                       n_jobs = c(107130, 66976, 48772, 25644, 11464, 3717, 1624),
                       free = c(T, T, T, F, F, F, F))
 
-## Plot it
+### Plot it
 pop_df %>%  mutate(lang = lang %>% factor(ordered = T)) %>%
             ggplot(aes(x = lang, y = n_jobs, fill = free)) +
             geom_col() + geom_hline(yintercept = 0) +
@@ -181,9 +174,9 @@ pop_df %>%  mutate(lang = lang %>% factor(ordered = T)) %>%
 
 
 ---
-# Además en R...
+## Además en R...
 
-## Lenguaje orientado a objetos 
+### Lenguaje orientado a objetos 
 
 1. Todo es un objeto.
 
@@ -191,7 +184,7 @@ pop_df %>%  mutate(lang = lang %>% factor(ordered = T)) %>%
 
 - pronto entenderemos mejor esto...
 
-## Librerías y funciones
+### Librerías y funciones
 
 3. Se usan funciones para crear y editar objetos.
 
@@ -210,10 +203,9 @@ name: started
 
 # Configuración inicial
 
-<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+<html><div style='float:left'></div><hr color='#FF007F' size=1px width=796px></html>
 
 ---
-
 # Descargar softwares
 
 - Descargar [R](https://cran.r-project.org/)
@@ -229,23 +221,23 @@ name: started
 - Configurar [Git](https://eduard-martinez.github.io/blog/github/clonar_github.html)
 
 ---
-# Instalar R (cont...)
+## Instalar R (cont...)
 
 Version 4.0.3. para [MAC](https://cran.r-project.org/bin/macosx/)
 
-![](figures/loop_mac.gif)
+![](pics/install_r_mac.gif)
 
 ---
-# Instalar R (cont...)
+## Instalar R (cont...)
 
 Version 4.0.3. para [Windows](https://cran.r-project.org/bin/windows/base/) o [Linux](https://cran.r-project.org)
 
 
-![](figures/loop_windows.gif)
+![](pics/install_r_windows.gif)
 
 ---
 name: git
-# Configurar Git
+## Configurar Git
 
 Ir a la CMD o terminal de su equipo y ejecutar los siguientes comandos:
 
@@ -263,14 +255,6 @@ git config --global user.email 'Escribe tu correo de GitHub'
 git config --global user.password "Escribe tu contraseña de GitHub"
 ```
 
-
----
-# Clonar el repositorio de la clase
-
-![](figures/loop_fork.gif)
-
-
-
 ---
 #  Checklist
 
@@ -282,11 +266,9 @@ git config --global user.password "Escribe tu contraseña de GitHub"
 
 ☑ Configuramos nuestra cuenta de GitHub en nuestro equipo
 
-☑ Clonamos un repositorio
-
 ---
 class: inverse, center, middle
 
 # Gracias
-<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+<html><div style='float:left'></div><hr color='#FF007F' size=1px width=796px></html>
 
