@@ -12,16 +12,15 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+
 ```{r setup, include=FALSE}
-library(tidyverse)
+# load packages
+library(pacman)
+pacman::p_load(here,knitr,tidyverse,ggthemes)
+
+# option html
 options(htmltools.dir.version = FALSE)
-library(knitr)
-opts_chunk$set(
-  fig.align="center",  
-  fig.height=4, #fig.width=6, out.width="748px", out.length="520.75px",
-  dpi=300, #fig.path='Figs/',
-  cache=T#, echo=F, warning=F, message=F
-  )
+opts_chunk$set(fig.align="center", fig.height=4 , dpi=300 , cache=T)
 ```
 
 # Contenido
@@ -68,11 +67,11 @@ name: prologue
 
 [Eduard Martinez](https://github.com/eduard-martinez), estudiante doctorado en Economía de la Universidad de los Andes. Puedes ver mi página web [aquí](https://eduard-martinez.github.io).
 
-<p style="color:black"><img alt="Qries" src="./figures/correo.png" width=30" height="30"> ef.martinezg@uniandes.edu.co </img></p>
+<p style="color:black"><img alt="Qries" src="./pics/correo.png" width=30" height="30"> ef.martinezg@uniandes.edu.co </img></p>
 
-<p><a href="https://twitter.com/emartigo" style="color:black;"> <img alt="Qries" src="./figures/twitter.jpg" width=30" height="30">  @emartigo</a> </p>
+<p><a href="https://twitter.com/emartigo" style="color:black;"> <img alt="Qries" src="./picss/twitter.jpg" width=30" height="30">  @emartigo</a> </p>
  
-<p><a href="https://github.com/eduard-martinez" style="color:black;"> <img alt="Qries" src="./figures/github.png" width=30" height="30">  eduard-martinez </a> </p>
+<p><a href="https://github.com/eduard-martinez" style="color:black;"> <img alt="Qries" src="./picss/github.png" width=30" height="30">  eduard-martinez </a> </p>
 
 
 <!--------------------->
@@ -155,7 +154,7 @@ R es un entorno de programacion libre que fue desarrollado en el año 1993 por R
 
 ### Popularidad
 
-```{R, eval = T , include=T , echo = F}
+```{r, eval = T , include=T , echo = F}
 pop_df =  data.frame( lang = c("SQL", "Python", "R", "SAS", "Matlab", "SPSS", "Stata"),
                       n_jobs = c(107130, 66976, 48772, 25644, 11464, 3717, 1624),
                       free = c(T, T, T, F, F, F, F))
@@ -168,8 +167,7 @@ pop_df %>%  mutate(lang = lang %>% factor(ordered = T)) %>%
             xlab("Statistical language") + scale_y_continuous(label = scales::comma) +
             ylab("Number of jobs") +
             labs( title = "Comparing statistical languages", subtitle = "Number of job postings on Indeed.com, 2019/01/06" , caption = "Tomado de: https://github.com/uo-ec607") +
-            scale_fill_manual( "Free?", labels = c("True", "False"), values = c("#f92672", "darkslategray")) + 
-            ggthemes::theme_pander(base_size = 17) + theme(legend.position = "bottom") 
+            scale_fill_manual( "Free?", labels = c("True", "False"), values = c("#f92672", "darkslategray")) + theme(legend.position = "bottom") 
 ```
 
 
@@ -189,9 +187,6 @@ pop_df %>%  mutate(lang = lang %>% factor(ordered = T)) %>%
 3. Se usan funciones para crear y editar objetos.
 
 4. Todas las funciones han sido escritas anteriormente por otros colaboradores en paquetes o librerías que debemos "llamar" cada vez que se vayan a usar.
-
-
-
 
 
 <!--------------------->

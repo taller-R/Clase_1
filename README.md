@@ -4,26 +4,21 @@
 
 # 1. Descargar la clase
 
-Puedes replicar esta clase de 3 diferentes formas:
+Puedes descargar esta clase de 3 diferentes formas:
 
-- 1.1. Descargar repositorio manualmente.
-- 1.2. Crear proyecto con versión de control de Git.
-- 1.3. Clonar el repositorio desde la terminal.
+- 1.1. Descargar repositorio manualmente. [Ver como hacerlo aquí](https://raw.githubusercontent.com/taller-R/clase_1/master/help/pics/download.gif)
 
-## 1.1. Descargando el repositorio manualmente:
+- 1.2. Crear proyecto con versión de control de Git. [Ver como hacerlo aquí](https://raw.githubusercontent.com/taller-R/clase_1/master/help/pics/crear_proyecto.gif)
 
-![](help/pics/download.gif) 
+- 1.3. Clonar el repositorio desde la terminal. [Ver como hacerlo aquí](https://github.com/taller-R/Clase_1/blob/master/help/pics/terminal.gif)
 
-## 1.2. Crear proyecto con versión de control de Git:
+Nota: Para hacerlo de las formas **1.2.** o **1.3.** primero debes tener instalado [Git](https://git-scm.com/downloads) en tu equipo.
 
-Para hacerlo de esta forma, debes tener instalado [Git](https://git-scm.com/downloads) en tu equipo.
-
-![](help/pics/crear_proyecto.gif) 
-
-## 1.3. Clonar el repositorio desde la terminal:
-
-Para hacerlo de esta forma, debes tener instalado [Git](https://git-scm.com/downloads) en tu equipo.
-
-![](help/pics/terminal.gif)
+# 2. Estructura de la clase
 
 
+La clase está dividida en 2 partes, una teórica y una empírica:
+
+- 2.1. En la carpeta **help** se encuentra un archivo llamado, **intro-to-class.html** que contiene la parte teórica de la clase.
+
+- 2.2. Después de ver la parte teórica, puede pasar a la parte empírica. En la carpeta **scr** se encuentra un script con aplicaciones de los temas vistos en clase.
