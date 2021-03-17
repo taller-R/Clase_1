@@ -12,13 +12,12 @@ Puedes descargar esta clase de 3 diferentes formas:
 
 - 1.3. Clonar el repositorio desde la terminal. [Ver como hacerlo aquí](https://github.com/taller-R/Clase_1/blob/master/help/pics/terminal.gif)
 
-Nota: Para hacerlo de las formas **1.2.** o **1.3.** primero debes tener instalado [Git](https://git-scm.com/downloads) en tu equipo.
+Nota: Para hacerlo de las formas **1.2.** o **1.3.** debe verificar si ya tiene instalado [Git](https://git-scm.com/downloads) en su equipo. Puedes verificar la versión de [Git](https://git-scm.com/downloads) escribiendo la siguiente línea de código `git --version` sobre la terminal de tu equipo.
 
 # 2. Estructura de la clase
 
+La clase está orientada a 2 objetivos: 
 
-La clase está dividida en 2 partes, una teórica y una empírica:
+- 2.1. Introducir a los estudiantes sobre los conceptos de R a desarrollar en la clase. La presentación de la clase se encuentran en la carpeta **help** bajo el nombre **intro-to-class.html**.
 
-- 2.1. En la carpeta **help** se encuentra un archivo llamado, **intro-to-class.html** que contiene la parte teórica de la clase.
-
-- 2.2. Después de ver la parte teórica, puede pasar a la parte empírica. En la carpeta **scr** se encuentra un script con aplicaciones de los temas vistos en clase.
+- 2.2. Aplicar los conceptos vistos en clase. Para cumplir con este objetivo, el estudiante deberá revisar el script de la clase que se encuentra en la carpeta **scr** y resolver algunos task que se encuentran a los largo de este.
